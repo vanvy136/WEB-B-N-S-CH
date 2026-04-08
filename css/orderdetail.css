@@ -1,0 +1,129 @@
+/* Layout chung cho trang chi tiết */
+.header-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #2c3e50;
+}
+
+.order-status-badge {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.order-status-badge.pending { background: #fff4e5; color: #ff9800; }
+
+/* Grid chia 2 cột */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Panel sản phẩm */
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.order-items-table th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #eee;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.order-items-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.prod-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.prod-item b { display: block; color: #2c3e50; }
+.prod-item small { color: #888; }
+
+/* Tính toán tiền */
+.order-calculation {
+    margin-top: 20px;
+    padding-left: 60%;
+}
+
+.calc-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.95rem;
+}
+
+.calc-row.total {
+    border-top: 2px solid #2c3e50;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Cột phải thông tin */
+.info-panel p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.info-panel hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Form xử lý trạng thái */
+.status-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 15px 0;
+    outline: none;
+}
+
+.btn-update {
+    width: 100%;
+    padding: 12px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-update:hover {
+    background: #1a252f;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .detail-grid { grid-template-columns: 1fr; }
+    .order-calculation { padding-left: 0; }
+}

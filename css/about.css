@@ -1,0 +1,287 @@
+:root{
+  --be:#F5EDE2;
+  --sage:#7A8F7A;
+  --sage-dark:#5F745F;
+  --text:#1F2937;
+  --white:#ffffff;
+  --border:rgba(0,0,0,.08);
+  --shadow:0 12px 30px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--be);
+  color: var(--text);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* CONTAINER */
+
+.container{
+  width: min(1200px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  background: var(--sage);
+  color: var(--be);
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+  gap:18px;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:900;
+  color: var(--be);
+  margin-left: 30px;
+}
+
+.logo span{
+  background: var(--be);
+  color: var(--sage-dark);
+  padding:4px 10px;
+  border-radius:10px;
+  margin-right:4px;
+}
+
+/* MENU */
+
+.menu{
+  display:flex;
+  gap:12px;
+  flex-wrap:nowrap;
+  white-space:nowrap;
+}
+
+.menu a{
+  color: rgba(245,237,226,.92);
+  font-weight:50;
+  font-size:16px;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid transparent;
+  transition:.2s ease;
+}
+
+.menu a:hover{
+  color:#fff;
+  background: rgba(245,237,226,.14);
+  border:1px solid rgba(245,237,226,.25);
+}
+
+.menu a.active{
+  color:#fff;
+  background: rgba(245,237,226,.18);
+  border:1px solid rgba(245,237,226,.35);
+}
+
+/* RIGHT */
+
+.right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-right: 30px;
+}
+
+.icon-btn{
+  width:42px;
+  height:42px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(245,237,226,.25);
+  background: rgba(245,237,226,.14);
+  color: var(--be);
+  cursor:pointer;
+  position:relative;
+}
+
+.badge{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  border-radius:999px;
+  background: var(--be);
+  color: var(--sage-dark);
+  font-size:11px;
+  font-weight:900;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{
+  font-size:42px;
+  color:var(--sage-dark);
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:600px;
+  margin:auto;
+  font-size:18px;
+}
+
+/* ABOUT */
+
+.about{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  padding:60px;
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text h2{
+  color:var(--sage-dark);
+  margin-bottom:10px;
+}
+
+.about-image img{
+  width:300px;
+}
+
+/* FEATURES */
+
+.features{
+  padding:60px;
+  text-align:center;
+}
+
+.feature-grid{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.feature{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+}
+
+.feature i{
+  font-size:28px;
+  color:var(--sage);
+  margin-bottom:10px;
+}
+
+/* TECH */
+
+.tech{
+  padding:60px;
+  text-align:center;
+}
+
+.tech-list{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.tech-list span{
+  background:white;
+  padding:10px 20px;
+  border-radius:20px;
+}
+
+/* STUDENT */
+
+.student{
+  padding:60px;
+  text-align:center;
+}
+
+.student-grid{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.student-box{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.2s;
+}
+
+.student-box:hover{
+  transform:translateY(-5px);
+}
+
+/* FOOTER */
+
+footer{
+  background: var(--sage-dark);
+  color: rgba(245,237,226,.92);
+  padding:34px 0 0;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:18px;
+  padding-bottom:22px;
+}
+
+footer h3,
+footer h4{
+  color:#fff;
+  margin-bottom:10px;
+}
+
+footer a{
+  display:block;
+  margin:6px 0;
+  color: rgba(245,237,226,.92);
+}
+
+footer a:hover{
+  text-decoration:underline;
+}
+
+.copy{
+  border-top:1px solid rgba(245,237,226,.18);
+  padding:14px 0;
+  text-align:center;
+  font-size:13px;
+  color: rgba(245,237,226,.9);
+}

@@ -6,10 +6,10 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
  * and open the template in the editor.
  */
   
-$vnp_TmnCode = "O9JH01LC"; //Mã định danh merchant kết nối (Terminal Id)
-$vnp_HashSecret = "6LZF3RXHWB60LG9LYZXUA29GT8UZ6BKP"; //Secret key
+$vnp_TmnCode = "KXDQZ27A"; //Mã định danh merchant kết nối (Terminal Id)
+$vnp_HashSecret = "UMIGBFHHQBZEZJJZQSUOIWCLLPTDDZKK"; //Secret key
 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-$vnp_Returnurl = "https://sagewood.hstn.me/sagewood/pages/vnpay_php/vnpay_return.php";
+$vnp_Returnurl = "https://sagewood.iceiy.com/sagewood/pages/vnpay_php/vnpay_return.php";
 $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 $apiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/api/transaction";
 //Config input format

@@ -1,14 +1,27 @@
 <?php
 session_start();
-include "../includes/config.php";
+require_once "../includes/config.php";
 
-// Giả sử user_id = 1 nếu chưa có hệ thống đăng nhập để test
-// Khi có đăng nhập, bạn dùng: $user_id = $_SESSION['user_id'];
-$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 1;
+// Kiểm tra đăng nhập
+if (!isset($_SESSION['user']['user_id'])) {
+    header("Location: ../auth/login.php");
+    exit();
+}
 
-// Lấy danh sách đơn hàng của người dùng này
-$sql_orders = "SELECT * FROM orders WHERE user_id = '$user_id' ORDER BY created_at DESC";
-$res_orders = mysqli_query($conn, $sql_orders);
+// Lấy ID người dùng đang đăng nhập
+$user_id = (int) $_SESSION['user']['user_id'];
+
+// Lấy đơn hàng thuộc người dùng đang đăng nhập
+$sql_orders = "SELECT * FROM orders
+               WHERE user_id = ?
+               ORDER BY created_at DESC";
+
+// Sử dụng Prepared Statement
+$stmt = $conn->prepare($sql_orders);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+
+$res_orders = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
